@@ -13,11 +13,11 @@ from sklearn.model_selection import train_test_split
 
 def read_data(file):
     data = pd.read_csv(file)
-    return(data)
+    return data
 
 def train_test_split(data):
     x_train, x_valid, y_train, y_valid = train_test_split(data.sentence.astype(str), data.score.values, test_size=0.15, shuffle=True)
-    return(x_train,x_valid,y_train,y_valid)
+    return (x_train,x_valid,y_train,y_valid)
 
 
 def encode(texts, tokenizer, max_length):
@@ -41,7 +41,7 @@ def build_model(transformer, loss, max_len):
         transformer_layer = transformers.TFBertModel.from_pretrained('bert-base-chinese')
         model = build_model(transformer_layer)
         print(model.summary())
-    return(model)
+    return model
 
 def main():
     your_data = read_data('YOUR_PATH')
