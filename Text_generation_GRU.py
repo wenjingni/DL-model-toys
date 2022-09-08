@@ -1,3 +1,4 @@
+# This file is adapted from Tensorflow Text Generation with RNN official tutorial 
 import tensorflow as tf
 import numpy as np
 import time
